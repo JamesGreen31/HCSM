@@ -1,10 +1,8 @@
 :root {
-  --bg: #f4f7fb;
-  --card-bg: #ffffff;
-  --text: #1f2a37;
-  --muted: #4b5563;
-  --accent: #1259a7;
-  --shadow: 0 14px 35px rgba(15, 23, 42, 0.12);
+  --bg: #ededed;
+  --banner: #9f2323;
+  --text: #121212;
+  --link: #1538d0;
 }
 
 * {
@@ -14,73 +12,75 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
   color: var(--text);
-  background: radial-gradient(circle at top, #ffffff 0%, var(--bg) 60%);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.site-wrap {
-  width: min(1040px, 92%);
-  margin: 3rem auto;
-}
-
-.hero {
+.brand-banner {
+  background: var(--banner);
+  color: #fff;
   text-align: center;
-  margin-bottom: 2.5rem;
+  padding: 2.25rem 1.25rem;
 }
 
-.eyebrow {
+.brand-banner h1 {
   margin: 0;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--accent);
+  font-size: clamp(2rem, 6.2vw, 3.4rem);
+  line-height: 1.15;
   font-weight: 700;
-  font-size: 0.75rem;
 }
 
-h1 {
-  margin: 0.45rem 0;
-  font-size: clamp(2.2rem, 6vw, 3.6rem);
+.content-wrap {
+  max-width: 920px;
+  margin: 3.5rem auto;
+  padding: 0 1.25rem;
+  text-align: center;
 }
 
-.subtitle {
+.section-block + .section-block {
+  margin-top: 1.2rem;
+}
+
+h2 {
+  margin: 0 0 1.1rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.phone-row,
+address p {
   margin: 0;
-  color: var(--muted);
+  font-size: clamp(1.75rem, 3.2vw, 2.1rem);
+  line-height: 1.45;
 }
 
-.locations {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
-}
-
-.location-card {
-  background: var(--card-bg);
-  border-radius: 16px;
-  padding: 1.25rem 1.5rem;
-  box-shadow: var(--shadow);
-  border: 1px solid #e5e7eb;
-}
-
-.location-card h2 {
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-  font-size: 1.2rem;
+.phone-row a {
+  color: var(--link);
 }
 
 address {
-  margin: 0;
   font-style: normal;
-  line-height: 1.7;
-  color: var(--muted);
 }
 
-address a {
-  color: var(--accent);
-  font-weight: 700;
-  text-decoration: none;
+address p + p {
+  margin-top: 2.2rem;
 }
 
-address a:hover {
-  text-decoration: underline;
+@media (max-width: 700px) {
+  .brand-banner {
+    padding: 2rem 1rem;
+  }
+
+  .content-wrap {
+    margin: 2.5rem auto;
+  }
+
+  h2 {
+    font-size: clamp(2.1rem, 9vw, 2.5rem);
+  }
+
+  .phone-row,
+  address p {
+    font-size: clamp(1.9rem, 6.8vw, 2.2rem);
+  }
 }
