@@ -10,12 +10,12 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  color: #1f1f1f;
 }
 
-/* old red theme */
 .brand-banner {
   background: linear-gradient(180deg, #8b1e1e 0%, #6f1414 100%);
-  color: white;
+  color: #ffffff;
   padding: 38px 20px;
   text-align: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
@@ -25,6 +25,17 @@ body {
   margin: 0;
   font-size: 3rem;
   font-weight: 700;
+}
+
+.alert-banner {
+  background: #c62828;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 20px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .content-wrap {
@@ -39,7 +50,7 @@ body {
 .section-block h2 {
   margin: 0 0 26px;
   font-size: 2.2rem;
-  color: #111;
+  color: #111111;
 }
 
 .location-card {
@@ -54,6 +65,16 @@ body {
   margin: 0 0 14px;
   font-size: 1.45rem;
   color: #8b1e1e;
+}
+
+.location-update {
+  background: #fff4e5;
+  border-left: 5px solid #f59e0b;
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  color: #7a4b00;
+  border-radius: 6px;
 }
 
 .location-card address {
@@ -72,7 +93,7 @@ body {
   margin: 18px 0 8px;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #444;
+  color: #444444;
 }
 
 .phone-link {
@@ -83,7 +104,8 @@ body {
   text-decoration: none;
 }
 
-.phone-link:hover {
+.phone-link:hover,
+.phone-link:focus {
   text-decoration: underline;
 }
 
@@ -98,4 +120,44 @@ body {
 
 .site-footer p {
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .brand-banner {
+    padding: 28px 16px;
+  }
+
+  .brand-banner h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  .alert-banner {
+    font-size: 1.05rem;
+    padding: 12px 16px;
+  }
+
+  .content-wrap {
+    padding: 32px 16px 40px;
+  }
+
+  .section-block h2 {
+    font-size: 1.8rem;
+  }
+
+  .location-card {
+    padding: 20px 18px;
+  }
+
+  .location-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .location-card address p {
+    font-size: 1.3rem;
+  }
+
+  .phone-link {
+    font-size: 1.3rem;
+  }
 }
